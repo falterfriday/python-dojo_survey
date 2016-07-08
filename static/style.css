@@ -1,0 +1,7 @@
+#wrapper {
+	display: inline-block;
+	border: solid black 1px;
+	height: 200px;
+	width: auto;
+	padding: 15px;
+}
