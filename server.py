@@ -6,8 +6,8 @@ def index():
   return render_template("index.html")
 # this route will handle form submission
 # defined which HTTP methods are allowed by this route
-@app.route('/users', methods=['POST'])
-def create_user():
+@app.route('/results', methods=['POST'])
+def info():
    print "Got Post Info"
    name = request.form['name']
    email = request.form['email']

@@ -18,15 +18,32 @@ Description: Never Stop Learning
 ======================================================
 -->
 <head>
-       <title>Form Test Index</title>
-    </head>
-    <body>
+  <title>Dojo Survey Index</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+  <body>
+    <div id="wrapper">
       <h1>Index Page</h1>
-      <h3>Create a User</h3>
-      <form action='/users' method='post'>
-          Name: <input type='text' name='name'>
-          Email: <input type='text' name='email'>
-          <input type='submit' value='create user'>
-      </form>
-    </body>
+        <form action='/result' method='post'>
+          Your Name: <input type='text' name='name'><br>
+          Dojo Location: 
+            <select>
+              <option value="washington dc">Washington DC</option>
+              <option value="seattle">Seattle</option>
+              <option value="silicon valley">Silicon Valley</option>
+              <option value="dallas">Dallas</option>
+            </select><br>
+          Favorite Language: 
+            <select>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+              <option value="jquery">jQuery</option>
+              <option value="python">Python</option>
+            </select><br>
+          Comments: (optional)<input type='text' name='comment'><br>
+          <input type='submit' value='button'>
+        </form>
+    </div>
+  </body>
 </html>
