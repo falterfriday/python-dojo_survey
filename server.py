@@ -4,14 +4,13 @@ app = Flask(__name__)
 @app.route('/')
 def index():
   return render_template("index.html")
-# this route will handle form submission
-
-# defined which HTTP methods are allowed by this route
+@app.route('/result')
+def result():
+	return render_template('result.html')
+	return "you GETed here!"
 @app.route('/results', methods=['POST'])
 def info():
    print "Got Post Info"
    name = request.form['name']
-   email = request.form['email']
-   # redirects back to the '/' route
-   return redirect('/')
+   # return redirect('/')
 app.run(debug=True)
