@@ -4,13 +4,17 @@ app = Flask(__name__)
 @app.route('/')
 def index():
   return render_template("index.html")
-@app.route('/result')
-def result():
-	return render_template('result.html')
-	return "you GETed here!"
-@app.route('/results', methods=['POST'])
-def info():
+
+@app.route('/result', methods=['POST'])
+def sub_data():
    print "Got Post Info"
    name = request.form['name']
-   # return redirect('/')
+   location = request.form['location']
+   language = request.form['language']
+   comment = request.form['comment']
+   return render_template('result.html', name=name, comment=comment, location=location, language=language)
+@app.route('/result')
+def go_back():
+	return render_template('index.html')
+	
 app.run(debug=True)

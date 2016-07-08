@@ -27,7 +27,7 @@ Description: Never Stop Learning
         <form action='/result' method='post'>
           Your Name: <input type='text' name='name'><br>
           Dojo Location: 
-            <select>
+            <select name="location">
               <option value="">Locations:</option>
               <option value="washington dc">Washington DC</option>
               <option value="seattle">Seattle</option>
@@ -35,7 +35,7 @@ Description: Never Stop Learning
               <option value="dallas">Dallas</option>
             </select><br>
           Favorite Language: 
-            <select>
+            <select name="language">
               <option value="">Languages:</option>
               <option value="html">HTML</option>
               <option value="css">CSS</option>
@@ -43,8 +43,8 @@ Description: Never Stop Learning
               <option value="jquery">jQuery</option>
               <option value="python">Python</option>
             </select><br>
-          Comments: (optional)<input type='text' name='comment'><br>
-          <input type='submit' value='button'>
+          Comments: (optional)<input type='text' action='/result' name='comment'><br>
+          <input type='submit' value='Submit'>
         </form>
     </div>
   </body>

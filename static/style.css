@@ -2,8 +2,9 @@
 	display: inline-block;
 	border: solid black 1px;
 	height: 200px;
-	width: auto;
+	width: 303.88px;
 	padding: 15px;
 }
-
-/*use form.info and assign it to a variable then call it html file*/
+h1 {
+	margin-top: 0px;
+}
